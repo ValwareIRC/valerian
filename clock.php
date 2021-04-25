@@ -20,25 +20,25 @@ else { $v = "Requidas"; $vNum = '5'; }
 $today = $v;
 
 if ($dayNum == '1') { $vHour = $hour; }
-if ($dayNum == '2') {
+elseif ($dayNum == '2') {
 	if ($hour <= '08' && $hour >= '00') { $vHour = $hour + 24; }
 	else { $vHour = $hour - 8; }
 }
-if ($dayNum == '3') {
+elseif ($dayNum == '3') {
 	if ($hour <= '17' && $hour >= '00') { $vHour = $hour + 15; }
 	else { $vHour = $hour - 18; }
 }
 if ($dayNum == '4') { $vHour = $hour + 6; }
 
-if ($dayNum == '5') {
+elseif ($dayNum == '5') {
 	if ($hour <= '02' && $hour >= '00') { $vHour = $hour + 30; }
 	else { $vHour = $hour - 3; }
 }
-if ($dayNum == '6') {
+elseif ($dayNum == '6') {
 	if ($hour <= '11' && $hour >= '00') { $vHour = $hour + 21; }
 	else { $vHour = $hour + 12; }
 }
-if ($dayNum == '7') { $vHour = $hour + 12; }
+elseif ($dayNum == '0') { $vHour = $hour + 12; }
 
 if ($vHour >= '18') { $xm = "PM"; }
 else { $xm = "AM"; }
